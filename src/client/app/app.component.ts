@@ -76,7 +76,7 @@ export class AppComponent {
   heroes: Hero[];
   selectedHero: Hero;
 
-  constructor(private _heroService: HeroService) {}
+  constructor(private heroService: HeroService) {}
 
   onSelect(hero: Hero) {
     this.selectedHero = hero;
