@@ -10,14 +10,14 @@ import {
   TestComponentBuilder
 } from 'angular2/testing';
 // import {provide} from 'angular2/core';
-import {AppComponent} from './app.component';
+import { HeroesComponent } from './heroes.component';
 
 describe('MyApp Component', () => {
 
   beforeEachProviders((): any[] => []);
 
   it('should ...', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-    return tcb.createAsync(AppComponent).then((fixture: ComponentFixture) => {
+    return tcb.createAsync(HeroesComponent).then((fixture: ComponentFixture) => {
       fixture.detectChanges();
     });
   }));
