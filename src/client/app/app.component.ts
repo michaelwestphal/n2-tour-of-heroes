@@ -7,7 +7,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 
 @Component({
-  // moduleId: module.id,
+  moduleId: __moduleName,
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
@@ -17,6 +17,7 @@ import { HeroService } from './hero.service';
     </nav>
     <router-outlet></router-outlet>
   `,
+  styleUrls: ['app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS, HeroService]
 })
