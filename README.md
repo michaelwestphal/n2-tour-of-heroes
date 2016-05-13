@@ -11,3 +11,7 @@ To run this repo, perform the following steps:
 2. `npm start`
 
 Please see the scripts present in the `package.json` for more options and the [usage](https://github.com/angular/angular-cli#usage) section of the `angular-cli` project.
+
+## TODO
+- [ ] Update to latest version of Angular CLI
+- [ ] Update to latest version of Angular 2 (if not accomplished by the task above)
