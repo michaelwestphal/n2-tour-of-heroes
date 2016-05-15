@@ -1,9 +1,9 @@
-export class Ng2TourOfHerosPage {
+export class Ng2CliUpgradePage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('ng2-tour-of-heros-app p')).getText();
+    return element(by.css('ng2-tour-of-heroes-app h1')).getText();
   }
 }

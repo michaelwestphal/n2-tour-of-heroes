@@ -1,11 +1,11 @@
-import { Component, OnInit } from 'angular2/core';
-import { RouteParams } from 'angular2/router';
+import { Component, OnInit } from '@angular/core';
+import { RouteSegment } from '@angular/router';
 
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
-  moduleId: __moduleName,
+  moduleId: module.id,
   selector: 'my-hero-detail',
   templateUrl: 'hero-detail.component.html',
   styleUrls: ['hero-detail.component.css']
@@ -16,10 +16,10 @@ export class HeroDetailComponent implements OnInit {
 
   constructor(
     private heroService: HeroService,
-    private routeParams: RouteParams) { }
+    private routeSegment: RouteSegment) { }
 
   ngOnInit() {
-    let id = +this.routeParams.get('id');
+    let id = +this.routeSegment.getParam('id');
     this.heroService.getHero(id)
       .then(hero => this.hero = hero);
   }

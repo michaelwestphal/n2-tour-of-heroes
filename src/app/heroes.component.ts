@@ -1,16 +1,14 @@
-import { Component, OnInit } from 'angular2/core';
-import { Router } from 'angular2/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Hero } from './hero';
-// import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
 
 @Component({
-  moduleId: __moduleName,
+  moduleId: module.id,
   selector: 'my-heroes',
   templateUrl: 'heroes.component.html',
   styleUrls: ['heroes.component.css']
-  // directives: [HeroDetailComponent]
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
@@ -33,7 +31,7 @@ export class HeroesComponent implements OnInit {
   }
 
   gotoDetail(hero: Hero) {
-    let link = ['HeroDetail', { id: this.selectedHero.id }];
+    let link = ['detail', this.selectedHero.id ];
     this.router.navigate(link);
   }
 }
